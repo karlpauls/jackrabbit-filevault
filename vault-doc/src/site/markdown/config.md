@@ -55,7 +55,7 @@ Both contain arbitrarily many `include` or `exclude` nodes.
 
 Each have either an element `class` for a fully qualified class name or consists of one of the following attributes (which implicitly sets a class)
 
-Filter attribute | Values | Additional attributes | Used Filter Class | Description
+Filter attribute | Values | Additional Attributes | Used Filter Class | Description
 --- | --- | --- | --- | ---
 `nodeType` |  the node type | `respectSupertype` set to `true` means that also all subtypes of the given node type should be considered. | `NodeTypeItemFilter` | Only applies to the given node type.
 `isNode` | Either `true` or `false` (the default) | - | `IsNodeFilter` | Only applies to nodes (and not to properties) or vice-versa.
@@ -70,7 +70,7 @@ The following `types` are known:
 
 Type | Used Class | Description
 --- | --- | ---
-`file` | `FileArtifactHandler` | Deserializes `nt:file`s from generic or XML generic serializations
+`file` | `FileArtifactHandler` | Deserializes `nt:file`s from generic or XML generic serializations as well as full-coverage DocView XMLs (ones not named `.content.xml`)
 `folder` | `FolderArtifactHandler` | Deserializes folders
 `nodetype` | `NodeTypeArtifactHandler` | Deserializes `nt:nodeType` nodes from `*.xcnd` files
 `generic` | `GenericArtifactHandler` | Deserializes DocView artifacts, the default if no `type` is set
